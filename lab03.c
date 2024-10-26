@@ -1,7 +1,7 @@
 /** lab03.c
  * ===========================================================
- * Name: First Last
- * Section: xxx
+ * Name: Michael Crowl
+ * Section: *unintelligible rune*
  * Project: Lab 3 - List ADT (w/array)
  * ===========================================================
  */

@@ -8,11 +8,23 @@ ListADTArray createList() {
 }
 
 int append(ListADTArray *L, int X) {
-	return 0;
+	if(L->size == MAX)
+		return 0;
+	L->items[L->size] = X;
+	L->size++;
+	return 1;
 }
 
 int prepend(ListADTArray *L, int X) {
-	return 0;
+	if(L->size == MAX)
+		return 0;
+	for(int i = L->size - 1; i >= 0; i--){
+		L->items[i + 1] = L->items[i];
+	}
+	L->items[0] = X;
+	L->size++;
+
+	return 1;
 }
 
 int isEmpty(ListADTArray L) {
@@ -20,7 +32,7 @@ int isEmpty(ListADTArray L) {
 }
 
 int getLength(ListADTArray L) {
-	return 0;
+	return L.size;
 }
 
 int insertAfter(ListADTArray* L, int W, int X) {
@@ -41,6 +53,9 @@ int removeItem(ListADTArray* L, int X) {
 }
 
 int linearSearch(ListADTArray L, int X) {
+	for(int i = 0; i < L.size; i++)
+		if(L.items[i] == X)
+			return 1;
 	return 0;
 }
 
